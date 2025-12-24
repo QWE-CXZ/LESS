@@ -270,7 +270,6 @@ class RayLessTrainer(RayPPOTrainer):
                     with simple_timer("old_log_prob", timing_raw):
                         old_log_prob = self.actor_rollout_wg.compute_log_prob(batch)
                         batch = batch.union(old_log_prob)
-                    print("try breakpoint")
 
                     if self.use_reference_policy:
                         # compute reference log_prob
@@ -299,7 +298,6 @@ class RayLessTrainer(RayPPOTrainer):
                     with simple_timer("revise_adv", timing_raw):
                         trace_length=self.config.algorithm.get("mu", 5)
                         batch = revise_adv(batch,trace_length)
-                        print("revise_adv finish")
 
                     # update critic
                     if self.use_critic:
