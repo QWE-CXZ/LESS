@@ -42,15 +42,6 @@ By distinguishing low-entropy segments into "correct-only", "incorrect-only", an
 
 - Dataset: [hendrycks_math](https://huggingface.co/datasets/hendrydong/hendrycks_math) (7.5k math problems, covers algebra, geometry, number theory, etc.).
 
-### Training Configuration
-
-Recommended hyperparameters:
-
-- Minimum low-entropy segment length `μ=5` (optimal for stability and accuracy).
-
-- Entropy quantile `h` (follows Wang et al., 2025 for threshold calculation).
-
-- Batch size: 512, Learning rate: 1e-6, Clip range: 0.2–0.28.
 
 ### Quick Run
 
