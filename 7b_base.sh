@@ -11,6 +11,8 @@ exp_name='LESS'
 
 adv_estimator=grpo
 
+mu=5  #minimum length
+
 use_kl_in_reward=False
 kl_coef=0.0
 use_kl_loss=False
@@ -83,6 +85,7 @@ HYDRA_FULL_ERROR=1 python -m recipe.less.main_less \
     algorithm.adv_estimator=${adv_estimator} \
     algorithm.use_kl_in_reward=${use_kl_in_reward} \
     algorithm.kl_ctrl.kl_coef=${kl_coef} \
+    algorithm.mu=${mu} \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.use_dynamic_bsz=${use_dynamic_bsz} \
     actor_rollout_ref.ref.log_prob_use_dynamic_bsz=${use_dynamic_bsz} \
