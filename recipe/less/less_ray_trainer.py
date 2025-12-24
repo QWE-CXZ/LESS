@@ -179,7 +179,7 @@ class RayLessTrainer(RayPPOTrainer):
                         response_tokenlevel_str_list += new_response_tokenlevel_str_list
                     else:  # NOTE: When prompts after filtering is less than train batch size,
                         # we skip to the next generation batch
-                        print("use dapo!")
+
                         metric_name = self.config.algorithm.filter_groups.metric
                         if metric_name == "seq_final_reward":
                             # Turn to numpy for easier filtering
@@ -297,7 +297,8 @@ class RayLessTrainer(RayPPOTrainer):
                         )
         
                     with simple_timer("revise_adv", timing_raw):
-                        batch = revise_adv(batch)
+                        trace_length=self.config.algorithm.get("mu", 5)
+                        batch = revise_adv(batch,trace_length)
                         print("revise_adv finish")
 
                     # update critic
