@@ -90,7 +90,7 @@ def revise_adv(
     response_masks = data.batch['response_mask'].tolist()
     entropys = data.batch['entropys'].tolist()
     advantages = data.batch['advantages'].tolist()
-    trace_len = trace_length5
+    trace_len = trace_length
 
     uid2metric_groups = {uids[i]: [] for i in range(len(uids))}
     for idx, uid in enumerate(data.non_tensor_batch['uid']):
