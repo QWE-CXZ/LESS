@@ -2,7 +2,7 @@
 
 # The Entropy Mechanism of Reinforcement Learning for Large Language Model Reasoning.
 
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)]([https://arxiv.org/pdf/2505.22617](https://arxiv.org/abs/2512.00908v1)) 
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.00908v1))
 
 
 <div align="center" style="font-family: Arial, sans-serif;">
