@@ -2,49 +2,15 @@
 
 # The Entropy Mechanism of Reinforcement Learning for Large Language Model Reasoning.
 
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.00908v1)
 
+# Getting started
 
-<div align="center" style="font-family: Arial, sans-serif;">
-  <p>
-    <a href="#🎉news" style="text-decoration: none; font-weight: bold;">🎉 News</a> •
-    <a href="#✨getting-started" style="text-decoration: none; font-weight: bold;">✨ Getting Started</a> •
-    <a href="#📖introduction" style="text-decoration: none; font-weight: bold;">📖 Introduction</a>
-  </p>
-  <p>
-    <a href="#🎈citation" style="text-decoration: none; font-weight: bold;">🎈 Citation</a> •
-    <a href="#🌻acknowledgement" style="text-decoration: none; font-weight: bold;">🌻 Acknowledgement</a> •
-    <a href="#📬Contact" style="text-decoration: none; font-weight: bold;">📬 Contact</a> •
-    <a href="#📈star-history" style="text-decoration: none; font-weight: bold;">📈 Star History</a>
-  </p>
-</div>
-
-</div>
-
-
-# 🎉News
-
-- **[2025/05/29]** 🎉 Ranked **#1** of the day on [Huggingface Daily Papers](https://huggingface.co/papers?date=2025-05-29).
-- **[2025/05/29]** Released our Paper on arXiv. See [here](https://arxiv.org/pdf/2505.22617). We provide insights into the entropy mechanism of RL for LLMs and propose two simple yet effective strategies to alleviate the entropy collapse. 
-
-
-
-# ✨Getting started
-
-After preparing the training data, for training Qwen2.5-7B on a single node, taking the KL-Cov approach as an example, you can simply run:
+After preparing the training data, for training Qwen2.5-7B on a single node, you can simply run:
 
 ```
 cd verl
 conda activate your_env
-bash recipe/dapo/7b_kl_cov.sh
-```
-
-While for training Qwen2.5-32B on multi nodes, you can run the following commands:
-
-```
-cd verl
-conda activate your_env
-bash recipe/dapo/32b_kl_cov.sh
+bash 7b_base.sh
 ```
 
 # 📖Introduction
@@ -96,14 +62,7 @@ If you find this paper or repo helpful, please cite us.
   year={2025}
 }
 ```
-# 🌻Acknowledgement
-We implement our reinforcement learning algorithm extending from [verl](https://github.com/volcengine/verl). We utilize [vLLM](https://github.com/vllm-project/vllm) for inference. Our models are trained primarily on [Qwen2.5 family](https://github.com/QwenLM/Qwen2.5). Our training data is built from [DAPO-MATH](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k). Thanks for their great contributions!
+# Acknowledgement
+We implement our reinforcement learning algorithm extending from [verl](https://github.com/volcengine/verl). We utilize [vLLM](https://github.com/vllm-project/vllm) for inference. Our models are trained primarily on [Qwen2.5 family](https://github.com/QwenLM/Qwen2.5). Our training data is built from [hendrycks_math](https://huggingface.co/datasets/hendrydong/hendrycks_math). Thanks for their great contributions!
 
-# 📬 Contact
-
-For questions, discussion, or collaboration opportunities, feel free to contact:
-- Ganqu Cui: cuiganqu@pjlab.org.cn
-- Yuchen Zhang: yuchen.zhang2003@gmail.com
-- Jiacheng Chen: jackchan9345@gmail.com
-- Ning Ding: ningding.cs@gmail.com
 
